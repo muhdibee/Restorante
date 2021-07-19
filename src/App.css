@@ -18,3 +18,7 @@
     transform: rotate(360deg);
   }
 } */
+
+.dishComment {
+  border-bottom: thin solid gray;
+}
