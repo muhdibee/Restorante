@@ -20,5 +20,9 @@
 } */
 
 .dishComment {
-  border-bottom: thin solid gray;
+  border: thin solid rgb(219, 216, 216);
+
+}
+.pointer {
+  cursor: pointer
 }
