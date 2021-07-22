@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
+import HeaderComponent from './HeaderComponent';
+import FooterComponent from './footerComponent'
 import MenuComponent from './MenuComponent';
 import DishDetailComponent from './DishDetailComponent';
-import {Navbar, NavbarBrand} from 'reactstrap';
 import { DISHES } from '../shared/dishes';
 
 export class MainComponent extends Component {
@@ -20,17 +21,17 @@ export class MainComponent extends Component {
         })
     }
 
+    shouldComponentUpdate() {
+        return true
+    }
+
     render() {
         return (
             <div>
-                <Navbar dark color="primary">
-                    <div className="container">
-                        <NavbarBrand>Restorante</NavbarBrand>
-                    </div>
-                </Navbar>
-
-                <MenuComponent dishes= {this.state.dishes} onClick={(dish) => this.onDishSelect(dish)}/>
-                <DishDetailComponent selectedDish={this.state.selectedDish}/>
+                <HeaderComponent />
+                    <MenuComponent dishes= {this.state.dishes} onClick={(dish) => this.onDishSelect(dish)}/>
+                    <DishDetailComponent selectedDish={this.state.selectedDish}/>
+                <FooterComponent />
             </div>
         )
     }
