@@ -1,7 +1,7 @@
 import React from 'react';
-import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 'reactstrap';
+import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
 
-function MenuComponent({onClick, dishes}) {
+function Menu({onClick, dishes}) {
     
         const menu = dishes;
 
@@ -12,7 +12,7 @@ function MenuComponent({onClick, dishes}) {
                             {menu.map((dish) => {
                                 return(
                                     <div key={dish.id} className="col-12 col-md-4 mt-2 m-1">
-                                            <Card className="pointer" onClick ={()=> onClick(dish)}>
+                                            <Card className="pointer" >
                                                 <CardImg width="90%" left src={dish.image} alt={dish.name}/>
                                                 <CardImgOverlay>
                                                     <CardTitle>{dish.name}</CardTitle>
@@ -28,4 +28,4 @@ function MenuComponent({onClick, dishes}) {
 }
 
 
-export default MenuComponent;
+export default Menu;

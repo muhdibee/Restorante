@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import HeaderComponent from './HeaderComponent';
 import FooterComponent from './footerComponent'
-import MenuComponent from './MenuComponent';
-import DishDetailComponent from './DishDetailComponent';
+import Menu from './MenuComponent';
 import { DISHES } from '../shared/dishes';
+import Home from './Homecomponent';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
-export class MainComponent extends Component {
+export class Main extends Component {
 
     constructor(props) {
         super(props);
@@ -26,15 +27,24 @@ export class MainComponent extends Component {
     }
 
     render() {
+        const HomePage = (props)=> {
+            return(
+                <Home/>
+            )
+        } 
+
         return (
             <div>
                 <HeaderComponent />
-                    <MenuComponent dishes= {this.state.dishes} onClick={(dish) => this.onDishSelect(dish)}/>
-                    <DishDetailComponent selectedDish={this.state.selectedDish}/>
+                    <Switch>
+                        <Route path="/home" component= { HomePage }/>
+                        <Route exact path ="/menu" component={()=> <Menu dishes={this.state.dishes}/>}/>
+                        <Redirect to= "/home"/>
+                    </Switch>
                 <FooterComponent />
             </div>
         )
     }
 }
 
-export default MainComponent;
+export default Main;

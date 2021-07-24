@@ -1,7 +1,7 @@
 import React from 'react';
 import {Card, CardImg} from 'reactstrap'
 
-export default function DishDetailComponent({selectedDish}) {
+export default function DishDetail({selectedDish}) {
     const dish = selectedDish;
     if(dish !== null){
         return (
