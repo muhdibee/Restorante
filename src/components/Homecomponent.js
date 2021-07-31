@@ -5,7 +5,7 @@ export default function Home({ dish, promotion, leader }) {
 
     function RenderCard({item}) {
         return(
-            <div className=" col-md-3 my-3">
+            <div className="col-12 col-sm-6 col-lg-4 my-3 ">
                  <Card >
                 <CardImg src={item.image} alt={item.name} />
                 <CardBody>
@@ -21,7 +21,7 @@ export default function Home({ dish, promotion, leader }) {
 
     return (
         <div className="container">
-            <div className="row align-items-start">
+            <div className="row align-items-start mx-3">
                 <RenderCard item={dish} />
                 <RenderCard item={promotion} />
                 <RenderCard item={leader} />
