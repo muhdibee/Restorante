@@ -1,4 +1,13 @@
 export const LEADERS = [
+  {
+    id: 3,
+    name: 'Muhammad Ibrahim',
+    image: '/assets/images/me_Linkedin.jpg',
+    designation: 'Executive Chef',
+    abbr: 'EC',
+    featured: true,
+    description: 'Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!'
+  },
     {
       id: 0,
       name: 'Peter Pan',
@@ -25,14 +34,6 @@ export const LEADERS = [
       abbr: 'CTO',
         featured: false,
       description: 'Blessed with the most discerning gustatory sense, Agumbe, our CFO, personally ensures that every dish that we serve meets his exacting tastes. Our chefs dread the tongue lashing that ensues if their dish does not meet his exacting standards. He lives by his motto, You click only if you survive my lick.'
-    },
-    {
-      id: 3,
-      name: 'Muhammad Ibrahim',
-      image: '/assets/images/me_Linkedin.jpg',
-      designation: 'Executive Chef',
-      abbr: 'EC',
-      featured: true,
-      description: 'Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!'
     }
+    
   ];

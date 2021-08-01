@@ -72,3 +72,7 @@ address{
 a {
   text-decoration: none;
 }
+.media {
+  border:1px ridge;
+  padding: 10px;
+}
