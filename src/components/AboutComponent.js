@@ -8,10 +8,10 @@ function About({leaders}) {
         return(leaders.map((leader) => {
             return (
                 <Media className="mb-4">
-                    <Media right top>
+                    <Media right middle>
                         <Media object src={leader.image} alt= {leader.name} width={100}/>
                     </Media>
-                        <Media body>
+                        <Media body className="ml-2">
                             <Media heading>
                             {leader.name}
                             </Media> 
