@@ -55,12 +55,12 @@ class Header extends Component {
                 <NavLink className="nav-link" to='/contact'><span className="fa fa-address-card fa-lg"></span> Contact us</NavLink>
               </NavItem>
             </Nav>
-            <Nav className='ml-auto'>
+          </Collapse>
+          <Nav className='ml-auto'>
               <NavItem>
                 <Button outline className="btn text-white" onClick={this.toggleModal}><span className='fa fa-sign-in fa-lg '></span> Login</Button>
               </NavItem>
             </Nav>
-          </Collapse>
         </div>
       </Navbar>
       <Jumbotron>
